@@ -17,7 +17,7 @@ Loading.hide();
 ```
 
 # API
-##Loading
+## Loading
 ### show()
 show loading
 
