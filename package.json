@@ -1,0 +1,25 @@
+{
+  "name": "react-native-root-views",
+  "version": "0.1.1",
+  "description": "react native root views",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeepeng/react-native-root-views.git"
+  },
+  "keywords": [
+    "react-native-root-views"
+  ],
+  "author": "Jeepeng",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Jeepeng/react-native-root-views/issues"
+  },
+  "homepage": "https://github.com/Jeepeng/react-native-root-views#readme",
+  "dependencies": {
+    "react-native-roots": "0.0.3"
+  }
+}
