@@ -1,6 +1,6 @@
 {
   "name": "react-native-root-views",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "react native root views",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/Jeepeng/react-native-root-views.git"
   },
   "keywords": [
-    "react-native-root-views"
+    "react-native-root-views",
+    "react-native-loading",
+    "react-native-actionsheet"
   ],
   "author": "Jeepeng",
   "license": "Apache-2.0",
