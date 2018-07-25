@@ -1,6 +1,6 @@
 {
   "name": "react-native-root-views",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "react native root views",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Jeepeng/react-native-root-views#readme",
   "dependencies": {
-    "react-native-roots": "0.0.3"
+    "react-native-roots": "^0.0.4"
   }
 }

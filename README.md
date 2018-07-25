@@ -1,4 +1,4 @@
-# react-native-roots
+# react-native-root-views
 
 # Installation
 ```shell
