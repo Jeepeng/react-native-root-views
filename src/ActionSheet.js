@@ -12,9 +12,9 @@ import {
   Dimensions,
   Animated,
   Easing,
-  ActionSheetIOS,
   TouchableWithoutFeedback,
   BackHandler,
+  SafeAreaView,
 } from 'react-native';
 import Roots from 'react-native-roots';
 
@@ -83,37 +83,39 @@ class ActionSheet extends Component {
     return (
       <TouchableWithoutFeedback onPress={this._onPressMask}>
         <Animated.View style={[styles.container, { opacity: this.state.fadeAnim }]}>
-          <View style={styles.content}>
-            {title ? (
-              <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={styles.title}>{title}</Text>
-              </View>
-            ) : null}
-            {message ? (
-              <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={styles.message}>{message}</Text>
-              </View>
-            ) : null}
-            {options.map((item, index) => {
-              if (index === cancelButtonIndex) {
-                return null;
-              } else if (index === destructiveButtonIndex) {
-                return this._renderItem({ text: item, color: '#f43f3c', index });
-              }
-              return this._renderItem({ text: item, color: tintColor, index });
-            })}
-          </View>
-          {cancelButtonIndex ? (
-            <View style={{ marginTop: 10 }}>
-              <Touchable onPress={() => this._onPressItem(cancelButtonIndex)}>
-                <View style={styles.cancel}>
-                  <Text style={{ fontSize: 17, color: tintColor }}>
-                    {options[cancelButtonIndex]}
-                  </Text>
+          <SafeAreaView>
+            <View style={styles.content}>
+              {title ? (
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                  <Text style={styles.title}>{title}</Text>
                 </View>
-              </Touchable>
+              ) : null}
+              {message ? (
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                  <Text style={styles.message}>{message}</Text>
+                </View>
+              ) : null}
+              {options.map((item, index) => {
+                if (index === cancelButtonIndex) {
+                  return null;
+                } else if (index === destructiveButtonIndex) {
+                  return this._renderItem({ text: item, color: '#f43f3c', index });
+                }
+                return this._renderItem({ text: item, color: tintColor, index });
+              })}
             </View>
-          ) : null}
+            {cancelButtonIndex ? (
+              <View style={{ marginTop: 10 }}>
+                <Touchable onPress={() => this._onPressItem(cancelButtonIndex)}>
+                  <View style={styles.cancel}>
+                    <Text style={{ fontSize: 17, color: tintColor }}>
+                      {options[cancelButtonIndex]}
+                    </Text>
+                  </View>
+                </Touchable>
+              </View>
+            ) : null}
+          </SafeAreaView>
         </Animated.View>
       </TouchableWithoutFeedback>
     );
